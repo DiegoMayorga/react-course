@@ -1,5 +1,6 @@
 import { CORE_CONCEPTS } from "../../data.js";
 import CoreConcept from "../CoreConcept/CoreConcept.jsx";
+import './coreconcepts.css'
 
 const CoreConcepts = () => {
   return (
