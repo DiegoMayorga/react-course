@@ -1,14 +1,15 @@
-import { useState } from 'react';
+import { useState } from "react";
 import { EXAMPLES } from "../../data";
+import Section from "../Section/Section";
 import TabButton from "../TabButton/TabButton";
-import "./examples.css"
+import "./examples.css";
 
 const Examples = () => {
   const [selectedTopic, setSelectedTopic] = useState();
 
-  function handleSelect(selectedButton) {
+  function handleClick(buttonClicked) {
     // selectedButton => 'components', 'jsx', 'props', 'state'
-    setSelectedTopic(selectedButton);
+    setSelectedTopic(buttonClicked);
     // console.log(selectedTopic);
   }
 
@@ -27,36 +28,35 @@ const Examples = () => {
   }
 
   return (
-    <section id="examples">
-      <h2>Examples</h2>
+    <Section id="examples" title="Examples">
       <menu>
         <TabButton
           isSelected={selectedTopic === "components"}
-          onSelect={() => handleSelect("components")}
+          onClick={() => handleClick("components")}
         >
           Components
         </TabButton>
         <TabButton
           isSelected={selectedTopic === "jsx"}
-          onSelect={() => handleSelect("jsx")}
+          onClick={() => handleClick("jsx")}
         >
           JSX
         </TabButton>
         <TabButton
           isSelected={selectedTopic === "props"}
-          onSelect={() => handleSelect("props")}
+          onClick={() => handleClick("props")}
         >
           Props
         </TabButton>
         <TabButton
           isSelected={selectedTopic === "state"}
-          onSelect={() => handleSelect("state")}
+          onClick={() => handleClick("state")}
         >
           State
         </TabButton>
       </menu>
       {tabContent}
-    </section>
+    </Section>
   );
 };
 
