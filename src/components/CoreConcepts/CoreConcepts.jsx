@@ -1,5 +1,5 @@
 import { CORE_CONCEPTS } from "../../data.js";
-import CoreConcept from "../CoreConcept/CoreConcept.jsx";
+import CoreConcept from "./CoreConcept.jsx";
 import Section from "../Section/Section.jsx";
 import "./coreconcepts.css";
 

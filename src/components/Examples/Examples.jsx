@@ -2,7 +2,7 @@ import { useState } from "react";
 import { EXAMPLES } from "../../data";
 import Section from "../Section/Section";
 import Tabs from "../Tabs/Tabs";
-import TabButton from "../TabButton/TabButton";
+import TabButton from "../Tabs/TabButton";
 import "./examples.css";
 
 const Examples = () => {
@@ -31,7 +31,6 @@ const Examples = () => {
   return (
     <Section id="examples" title="Examples">
       <Tabs
-      buttonsContainer="menu"
         buttons={
           <>
             <TabButton
